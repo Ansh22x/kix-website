@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kratos Innovations X (kix) · Telegram & Discord Bots, Custom Software & Websites</title>
+  <meta name="description" content="Kratos Innovations X (kix) engineers high-concurrency Telegram and Discord bots, bespoke backend software, and precision web experiences.">
+  
+  <!-- Hallmark Typography: Host Grotesk & Atkinson Hyperlegible Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;700&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      const saved = localStorage.getItem('kix-theme');
+      if (saved) {
+        document.documentElement.dataset.mode = saved;
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a class="visually-hidden" href="#mainContent">Skip to main content</a>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="#top" aria-label="Kratos Innovations X Home">
+        <span class="brand-mark">kix<span class="brand-dot">.</span></span>
+        <span class="brand-sub">kratos innovations x</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a class="nav-link" href="#capabilities">Capabilities</a>
+        <a class="nav-link" href="#process">Architecture</a>
+        <a class="nav-link" href="#team">Team</a>
+        <a class="nav-link" href="#builder">Project Spec</a>
+        <a class="nav-link" href="#faq">Standards</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="telemetry-chip">
+          <span class="telemetry-pulse" aria-hidden="true"></span>
+          <span>Online</span>
+        </div>
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle color theme" title="Toggle light/dark mode">
+          <svg class="theme-icon" id="themeIcon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+          </svg>
+        </button>
+        <a class="btn btn--primary btn--sm" href="https://t.me/TheDarkKratosX" target="_blank" rel="noopener noreferrer">
+          Contact Founder
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- Hero Section -->
+    <section class="hero" id="top" aria-labelledby="heroHeading">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="hero-badge">Engineering Studio</span>
+            <span class="telemetry-chip mono">Status: Accepting Builds</span>
+          </div>
+
+          <h1 class="hero-title" id="heroHeading">
+            We build bots, custom software, and the web.
+          </h1>
+
+          <p class="hero-lead">
+            Kratos Innovations X (kix) engineers high-throughput Telegram and Discord bots, bespoke backend tools, and precision web platforms.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#builder">
+              Configure a project
+            </a>
+            <a class="btn" href="#team">
+              Meet the team
+            </a>
+          </div>
+
+          <div class="hero-specs">
+            <div class="spec-item">
+              <span class="spec-val mono">99.9%</span>
+              <span class="spec-label">Target uptime on bot nodes</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-val mono">Direct</span>
+              <span class="spec-label">Founders on Telegram</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-val mono">100%</span>
+              <span class="spec-label">Client source ownership</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Terminal Console Sandbox -->
+        <div class="hero-visual" aria-label="KIX Systems Interactive Console">
+          <div class="console-panel">
+            <div class="console-header">
+              <div class="console-controls" aria-hidden="true">
+                <span class="console-pip"></span>
+                <span class="console-pip"></span>
+                <span class="console-pip"></span>
+              </div>
+              <div class="console-tabs" role="tablist" aria-label="Console Subsystems">
+                <button class="tab-btn is-active" role="tab" aria-selected="true" data-tab="telegram">Telegram</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="discord">Discord</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="software">Software</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="web">Web Stack</button>
+              </div>
+            </div>
+
+            <div class="console-body">
+              <div class="log-stream" id="consoleLogStream" aria-live="polite">
+                <div class="log-line">
+                  <span class="log-tag log-tag--accent">[tg:init]</span>
+                  <span class="log-text">KIX-Telegram-Engine v2.4 initialized</span>
+                </div>
+                <div class="log-line">
+                  <span class="log-tag">[webhook]</span>
+                  <span class="log-text">TLS 1.3 tunnel bound to https://api.kix.dev/tg/webhook</span>
+                </div>
+                <div class="log-line">
+                  <span class="log-tag">[router]</span>
+                  <span class="log-text">Dispatching 14 registered slash commands &amp; inline queries</span>
+                </div>
+                <div class="log-line">
+                  <span class="log-tag log-tag--ok">[runtime]</span>
+                  <span class="log-text">Event loop active · Latency: 12ms · Concurrency: 10,000 req/s</span>
+                </div>
+                <div class="log-line">
+                  <span class="log-tag log-tag--accent">[status]</span>
+                  <span class="log-text">Ready for user input. Type or click a command below.</span>
+                </div>
+              </div>
+
+              <div class="console-quick-actions">
+                <span class="quick-label mono">Quick triggers:</span>
+                <div class="quick-pills">
+                  <button class="cmd-pill" type="button" data-cmd="/start">/start</button>
+                  <button class="cmd-pill" type="button" data-cmd="/status">/status</button>
+                  <button class="cmd-pill" type="button" data-cmd="/team">/team</button>
+                  <button class="cmd-pill" type="button" data-cmd="/quote">/quote</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities / What We Do -->
+    <section class="section-wrap" id="capabilities" aria-labelledby="capabilitiesHeading">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Core Disciplines</span>
+          <h2 class="section-title" id="capabilitiesHeading">What we build at KIX</h2>
+          <p class="lead">Three focused areas of engineering with zero unnecessary dependencies.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: Telegram & Discord Bots -->
+          <article class="bento-card bento-card--featured">
+            <div>
+              <div class="bento-meta">
+                <span class="bento-num mono">01 // AUTOMATION</span>
+                <span class="telemetry-chip mono">High Concurrency</span>
+              </div>
+              <div class="bento-head">
+                <h3>Telegram &amp; Discord Bots</h3>
+                <p class="bento-desc">
+                  Event-driven bots crafted for community management, instant alerts, token verification, payment flows, and custom slash-command integrations.
+                </p>
+              </div>
+              <ul class="bento-list">
+                <li>Webhook architecture with sub-20ms event responses</li>
+                <li>Inline keyboards, deep links &amp; interactive menus</li>
+                <li>Crypto, Stripe &amp; custom payment gateway binding</li>
+                <li>Automated broadcast queues &amp; anti-spam logic</li>
+              </ul>
+            </div>
+            <div class="bento-footer">
+              <span class="bento-tech mono">Python · Node.js · Telethon · Discord.js</span>
+              <a class="btn btn--sm" href="#builder">Spec a Bot</a>
+            </div>
+          </article>
+
+          <!-- Card 2: Custom Software -->
+          <article class="bento-card">
+            <div>
+              <div class="bento-meta">
+                <span class="bento-num mono">02 // SYSTEMS</span>
+                <span class="telemetry-chip mono">Scalable Backend</span>
+              </div>
+              <div class="bento-head">
+                <h3>Custom Software</h3>
+                <p class="bento-desc">
+                  Specialized utilities, scrapers, data pipelines, and internal tools built around your exact business logic without generic SaaS bloat.
+                </p>
+              </div>
+              <ul class="bento-list">
+                <li>Automated scrapers &amp; real-time telemetry parsers</li>
+                <li>REST and GraphQL microservices with SQLite / Postgres</li>
+                <li>Scheduled tasks, worker queues &amp; background daemons</li>
+                <li>Custom desktop tools &amp; script automation</li>
+              </ul>
+            </div>
+            <div class="bento-footer">
+              <span class="bento-tech mono">FastAPI · Express · Docker · Redis</span>
+              <a class="btn btn--sm" href="#builder">Spec Software</a>
+            </div>
+          </article>
+
+          <!-- Card 3: Modern Websites -->
+          <article class="bento-card">
+            <div>
+              <div class="bento-meta">
+                <span class="bento-num mono">03 // INTERFACES</span>
+                <span class="telemetry-chip mono">Design Craft</span>
+              </div>
+              <div class="bento-head">
+                <h3>Modern Websites</h3>
+                <p class="bento-desc">
+                  Bespoke, high-performance web applications and landing pages designed with meticulous typography, fast load times, and responsive UX.
+                </p>
+              </div>
+              <ul class="bento-list">
+                <li>100/100 Lighthouse performance and accessibility</li>
+                <li>Custom design systems overseen by UI Lead Abhishek</li>
+                <li>Dynamic client portals &amp; administrative dashboards</li>
+                <li>Clean, maintainable source code ready for deployment</li>
+              </ul>
+            </div>
+            <div class="bento-footer">
+              <span class="bento-tech mono">Next.js · Modern CSS · TypeScript · Edge</span>
+              <a class="btn btn--sm" href="#builder">Spec Website</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Process Strip -->
+    <section class="section-wrap" id="process" aria-labelledby="processHeading">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Methodology</span>
+          <h2 class="section-title" id="processHeading">How we deliver from spec to production</h2>
+          <p class="lead">No bureaucratic overhead. Direct engineer-to-client velocity on Telegram.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <span class="process-num mono">STAGE 01</span>
+            <div class="process-head">Direct Spec Definition</div>
+            <p class="process-desc">
+              Message us directly on Telegram. We clarify parameters, API dependencies, commands, and target deliverables within 24 hours.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <span class="process-num mono">STAGE 02</span>
+            <div class="process-head">Interface &amp; Flow Design</div>
+            <p class="process-desc">
+              Abhishek establishes the interaction architecture, bot command dialogs, or web layout with zero generic templates.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <span class="process-num mono">STAGE 03</span>
+            <div class="process-head">Core Engineering</div>
+            <p class="process-desc">
+              Rahul and Ansh build the high-concurrency event loops, backend APIs, database models, and edge integration.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <span class="process-num mono">STAGE 04</span>
+            <div class="process-head">Deploy &amp; Handover</div>
+            <p class="process-desc">
+              We deploy to your server, Docker container, or VPS, test live throughput, and deliver 100% of the repository.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Team Section -->
+    <section class="section-wrap" id="team" aria-labelledby="teamHeading">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Leadership &amp; Engineering</span>
+          <h2 class="section-title" id="teamHeading">The architects behind KIX</h2>
+          <p class="lead">Connect directly with the individuals who write your code and design your product.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Member 1: Rahul Pachpute (Founder) -->
+          <article class="team-card team-card--founder">
+            <div>
+              <div class="team-card-header">
+                <div class="team-avatar-box">RP</div>
+                <span class="team-tag">Founder</span>
+              </div>
+              <h3 class="team-name">Rahul Pachpute</h3>
+              <div class="team-role mono">Founder &amp; Systems Architect</div>
+              <p class="team-bio">
+                Leads system architecture, core bot engines, and infrastructure at KIX. Specializes in scalable backend pipelines, high-concurrency bot integrations, and system-level performance.
+              </p>
+            </div>
+            <div class="team-contact">
+              <a class="tg-link-pill" href="https://t.me/TheDarkKratosX" target="_blank" rel="noopener noreferrer">
+                <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.27-5.63 3.72-.53.36-1.02.54-1.45.53-.48-.01-1.4-.27-2.09-.49-.84-.27-1.51-.42-1.45-.88.03-.24.37-.49 1.02-.75 4-1.74 6.68-2.88 8.03-3.44 3.82-1.58 4.61-1.86 5.13-1.87.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.21-.04.34z"/></svg>
+                <span>@TheDarkKratosX</span>
+              </a>
+              <button class="btn btn--sm" type="button" data-copy-handle="@TheDarkKratosX">Copy</button>
+            </div>
+          </article>
+
+          <!-- Member 2: Ansh (Founding Member) -->
+          <article class="team-card">
+            <div>
+              <div class="team-card-header">
+                <div class="team-avatar-box">AN</div>
+                <span class="team-tag">Founding Member</span>
+              </div>
+              <h3 class="team-name">Ansh</h3>
+              <div class="team-role mono">Founding Member &amp; Systems Engineer</div>
+              <p class="team-bio">
+                Oversees full-stack engineering, automated backend scripts, custom software tooling, and database optimization. Ensures rock-solid reliability across all deployed bot and web microservices.
+              </p>
+            </div>
+            <div class="team-contact">
+              <a class="tg-link-pill" href="https://t.me/TheDarkKratos" target="_blank" rel="noopener noreferrer">
+                <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.27-5.63 3.72-.53.36-1.02.54-1.45.53-.48-.01-1.4-.27-2.09-.49-.84-.27-1.51-.42-1.45-.88.03-.24.37-.49 1.02-.75 4-1.74 6.68-2.88 8.03-3.44 3.82-1.58 4.61-1.86 5.13-1.87.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.21-.04.34z"/></svg>
+                <span>@TheDarkKratos</span>
+              </a>
+              <button class="btn btn--sm" type="button" data-copy-handle="@TheDarkKratos">Copy</button>
+            </div>
+          </article>
+
+          <!-- Member 3: Abhishek (Main UI Designer) -->
+          <article class="team-card">
+            <div>
+              <div class="team-card-header">
+                <div class="team-avatar-box">AB</div>
+                <span class="team-tag">Design Lead</span>
+              </div>
+              <h3 class="team-name">Abhishek</h3>
+              <div class="team-role mono">Main UI &amp; UX Designer</div>
+              <p class="team-bio">
+                Crafts the visual identity, web interfaces, and user experience systems across KIX projects. Dedicated to authentic, high-craft aesthetics that eliminate generic boilerplate and deliver intuitive UX.
+              </p>
+            </div>
+            <div class="team-contact">
+              <a class="tg-link-pill" href="https://t.me/Artixtcho" target="_blank" rel="noopener noreferrer">
+                <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.27-5.63 3.72-.53.36-1.02.54-1.45.53-.48-.01-1.4-.27-2.09-.49-.84-.27-1.51-.42-1.45-.88.03-.24.37-.49 1.02-.75 4-1.74 6.68-2.88 8.03-3.44 3.82-1.58 4.61-1.86 5.13-1.87.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.21-.04.34z"/></svg>
+                <span>@Artixtcho</span>
+              </a>
+              <button class="btn btn--sm" type="button" data-copy-handle="@Artixtcho">Copy</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Project Spec Builder -->
+    <section class="section-wrap" id="builder" aria-labelledby="builderHeading">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Interactive Spec Builder</span>
+          <h2 class="section-title" id="builderHeading">Estimate and dispatch your project brief</h2>
+          <p class="lead">Select your requirements to compile an instant project specification and launch it directly to our Telegram inboxes.</p>
+        </div>
+
+        <div class="builder-box">
+          <div class="builder-inputs">
+            <!-- Project Category -->
+            <div class="form-group">
+              <span class="form-label">1. Primary Target</span>
+              <div class="choice-grid">
+                <label class="choice-card is-selected">
+                  <input type="radio" name="project_category" value="Telegram Bot" checked>
+                  <span>Telegram Bot</span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="project_category" value="Discord Bot">
+                  <span>Discord Bot</span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="project_category" value="Custom Software">
+                  <span>Custom Software</span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="project_category" value="Modern Website">
+                  <span>Modern Website</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Features Needed -->
+            <div class="form-group">
+              <span class="form-label">2. Architectural Capabilities</span>
+              <div class="choice-grid">
+                <label class="choice-card is-selected">
+                  <input type="checkbox" name="feature" value="Database / Storage" checked>
+                  <span>PostgreSQL / Redis</span>
+                </label>
+                <label class="choice-card is-selected">
+                  <input type="checkbox" name="feature" value="Payment Integration" checked>
+                  <span>Payment / Crypto Rails</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="feature" value="Web Admin Panel">
+                  <span>Admin Web Panel</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="feature" value="High Concurrency Webhooks">
+                  <span>High Concurrency Webhooks</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="feature" value="Custom UI Design">
+                  <span>Custom UI by Abhishek</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="feature" value="Docker Deployment">
+                  <span>Docker &amp; VPS Deploy</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="form-group">
+              <label class="form-label" for="builderTimeline">3. Target Timeline</label>
+              <select class="btn" id="builderTimeline" style="width: 100%; border-radius: var(--radius-pill); background: var(--color-paper-3);">
+                <option value="Rapid Sprint (3 to 5 days)">Rapid Sprint (3 to 5 days)</option>
+                <option value="Standard Release (1 to 2 weeks)" selected>Standard Release (1 to 2 weeks)</option>
+                <option value="Complex System (3+ weeks)">Complex Multi-Module System (3+ weeks)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Live Summary Card -->
+          <div class="spec-summary-card">
+            <div>
+              <div class="summary-title mono">Spec Manifest // Output</div>
+              <div class="summary-details" style="margin-top: var(--space-md);">
+                <div class="summary-row">
+                  <span class="summary-label">Target:</span>
+                  <span class="summary-val" id="summaryType">Telegram Bot</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">Timeline:</span>
+                  <span class="summary-val mono" id="summaryTimeline">Standard Release (1 to 2 weeks)</span>
+                </div>
+                <div class="summary-row" style="flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 6px;">
+                  <span class="summary-label">Stack Specs:</span>
+                  <span class="summary-val" id="summaryFeatures" style="text-align: left; font-size: 0.75rem; color: var(--color-cool);">Database / Storage, Payment Integration</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="summary-actions">
+              <p class="mono" style="font-size: 0.75rem; color: var(--color-muted); margin-bottom: 4px;">
+                One-click dispatch pre-filled spec to:
+              </p>
+              <a class="btn btn--primary" id="btnSendRahul" href="https://t.me/TheDarkKratosX" target="_blank" rel="noopener noreferrer">
+                Send to Rahul (@TheDarkKratosX)
+              </a>
+              <a class="btn" id="btnSendAnsh" href="https://t.me/TheDarkKratos" target="_blank" rel="noopener noreferrer">
+                Send to Ansh (@TheDarkKratos)
+              </a>
+              <a class="btn" id="btnSendAbhishek" href="https://t.me/Artixtcho" target="_blank" rel="noopener noreferrer">
+                Send to Abhishek (@Artixtcho)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Standards & FAQ -->
+    <section class="section-wrap" id="faq" aria-labelledby="faqHeading">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Engineering FAQs</span>
+          <h2 class="section-title" id="faqHeading">Frequently asked questions</h2>
+          <p class="lead">Direct answers about our development standards and project delivery.</p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3 class="faq-q">Who owns the code upon completion?</h3>
+            <p class="faq-a">
+              You own 100% of the intellectual property and code repository. We hand over the entire Git repository, Dockerfiles, and configuration files upon milestone completion.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">Where are the bots and software hosted?</h3>
+            <p class="faq-a">
+              We configure deployments directly on your preferred VPS (DigitalOcean, AWS, Hetzner, Railway) or provide turnkey managed container environments configured for 24/7 uptime.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">Can you handle high bot traffic without rate limits?</h3>
+            <p class="faq-a">
+              Yes. We design our bots with asynchronous webhook dispatchers, Redis message queues, and smart rate-limit backoffs to process thousands of updates per second cleanly.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">How do payments and milestones work?</h3>
+            <p class="faq-a">
+              Projects typically operate on standard phased milestone splits: initial architecture kickoff, functional demo review on test servers, and final deployment handover.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top">
+            <span class="brand-mark">kix<span class="brand-dot">.</span></span>
+            <span class="brand-sub">kratos innovations x</span>
+          </a>
+          <p style="font-size: 0.8125rem; color: var(--color-muted); margin-top: 4px;">
+            Bespoke Telegram &amp; Discord bots, custom software engines, and precision websites.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <a href="#capabilities">Capabilities</a>
+          <a href="#process">Architecture</a>
+          <a href="#team">Team</a>
+          <a href="#builder">Spec Builder</a>
+          <a href="https://t.me/TheDarkKratosX" target="_blank" rel="noopener noreferrer">@TheDarkKratosX</a>
+          <a href="https://t.me/TheDarkKratos" target="_blank" rel="noopener noreferrer">@TheDarkKratos</a>
+          <a href="https://t.me/Artixtcho" target="_blank" rel="noopener noreferrer">@Artixtcho</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Kratos Innovations X (kix). All rights reserved.
+        </div>
+        <div class="footer-stamp">
+          Built with Hallmark Console principles · Hand-crafted UI · Zero AI slop
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
